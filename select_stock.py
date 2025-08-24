@@ -4,6 +4,7 @@ import argparse
 import importlib
 import json
 import logging
+import shutil
 import sys
 from pathlib import Path
 from typing import Any, Dict, Iterable, List
@@ -81,8 +82,10 @@ def main():
     p = argparse.ArgumentParser(description="Run selectors defined in configs.json")
     p.add_argument("--data-dir", default="./data", help="CSV 行情目录")
     p.add_argument("--config", default="./configs.json", help="Selector 配置文件")
+    p.add_argument("--out-dir", default="./results", help="结果输出根目录")
     p.add_argument("--date", help="交易日 YYYY-MM-DD；缺省=数据最新日期")
     p.add_argument("--tickers", default="all", help="'all' 或逗号分隔股票代码列表")
+    p.add_argument("--frequency", default="Day", help="k线频次，Day/Week")
     args = p.parse_args()
 
     # --- 加载行情 ---
@@ -113,6 +116,22 @@ def main():
     if not args.date:
         logger.info("未指定 --date，使用最近日期 %s", trade_date.date())
 
+    # --- 准备输出目录 ---
+    out_dir = Path(args.out_dir) / (trade_date.strftime("%Y-%m-%d") + "-"+args.frequency)
+    if out_dir.exists():
+        shutil.rmtree(out_dir)
+    out_dir.mkdir(parents=True)
+
+    # 策略别名 -> 输出文件名映射
+    fname_map = {
+        "少妇战法": "shaofu.txt",
+        "少妇战法精选版": "shaofuv2.txt",
+        "SuperB1战法": "sb1.txt",
+        "补票战法": "bupiao.txt",
+        "TePu战法": "tepu.txt",
+        "填坑战法": "tiankeng.txt",
+    }
+
     # --- 加载 Selector 配置 ---
     selector_cfgs = load_config(Path(args.config))
 
@@ -128,12 +147,21 @@ def main():
 
         picks = selector.select(trade_date, data)
 
-        # 将结果写入日志，同时输出到控制台
+        # 1. 写入日志，同时输出到控制台
         logger.info("")
         logger.info("============== 选股结果 [%s] ==============", alias)
         logger.info("交易日: %s", trade_date.date())
         logger.info("符合条件股票数: %d", len(picks))
         logger.info("%s", ", ".join(picks) if picks else "无符合条件股票")
+
+        # 2. 按策略别名写入结果文件
+        out_fname = fname_map.get(alias)
+        if out_fname:
+            out_path = out_dir / out_fname
+            with out_path.open("w", encoding="utf-8") as f:
+                if picks:
+                    f.write(",".join(picks))
+            logger.info("结果已保存至 %s", out_path)
 
 
 if __name__ == "__main__":

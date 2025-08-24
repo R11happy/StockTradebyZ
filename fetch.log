@@ -1,0 +1,853 @@
+2025-08-22 01:09:44,036 [INFO] fetch_kline.py:81 筛选得到 3397 只股票
+2025-08-22 01:09:44,037 [INFO] fetch_kline.py:335 开始抓取 3397 支股票 | 数据源:tushare | 频率:day | 日期:20190101 → 20250822
+2025-08-22 01:29:03,719 [INFO] fetch_kline.py:362 全部任务完成，数据已保存至 /Users/xushuai/Documents/StockTradebyZ-main/data
+2025-08-23 12:56:34,667 [INFO] fetch_kline.py:81 筛选得到 3400 只股票
+2025-08-23 12:56:34,669 [INFO] fetch_kline.py:335 开始抓取 3400 支股票 | 数据源:tushare | 频率:week | 日期:20190101 → 20250823
+2025-08-23 13:31:31,287 [INFO] fetch_kline.py:362 全部任务完成，数据已保存至 /Users/xushuai/Documents/StockTradebyZ-main/data
+2025-08-23 13:36:59,414 [INFO] fetch_kline.py:81 筛选得到 3400 只股票
+2025-08-23 13:36:59,415 [INFO] fetch_kline.py:335 开始抓取 3400 支股票 | 数据源:tushare | 频率:week | 日期:20190101 → 20250823
+2025-08-23 13:44:38,039 [INFO] fetch_kline.py:81 筛选得到 938 只股票
+2025-08-23 13:44:38,040 [INFO] fetch_kline.py:335 开始抓取 938 支股票 | 数据源:tushare | 频率:week | 日期:20190101 → 20250823
+2025-08-23 13:52:48,858 [INFO] fetch_kline.py:362 全部任务完成，数据已保存至 /Users/xushuai/Documents/StockTradebyZ-main/data_week
+2025-08-23 16:07:25,162 [INFO] fetch_kline.py:81 筛选得到 3400 只股票
+2025-08-23 16:07:25,163 [INFO] fetch_kline.py:335 开始抓取 3400 支股票 | 数据源:tushare | 频率:day | 日期:20190101 → 20250823
+2025-08-23 16:40:55,268 [INFO] fetch_kline.py:362 全部任务完成，数据已保存至 /Users/xushuai/Documents/StockTradebyZ-main/data_day
+2025-08-23 23:19:01,353 [INFO] fetch_kline.py:81 筛选得到 3400 只股票
+2025-08-23 23:19:01,369 [INFO] fetch_kline.py:335 开始抓取 3400 支股票 | 数据源:tushare | 频率:day | 日期:20190101 → 20250823
+2025-08-23 23:27:14,585 [WARNING] fetch_kline.py:131 Tushare 拉取 600017 失败(1/3): ERROR.
+2025-08-23 23:28:41,752 [WARNING] fetch_kline.py:131 Tushare 拉取 600528 失败(1/3): ERROR.
+2025-08-23 23:32:04,028 [WARNING] fetch_kline.py:131 Tushare 拉取 603301 失败(1/3): ERROR.
+2025-08-23 23:35:43,777 [INFO] fetch_kline.py:362 全部任务完成，数据已保存至 /Users/xushuai/Documents/StockTradebyZ-main/data_day
+2025-08-24 06:59:53,146 [INFO] fetch_kline.py:81 筛选得到 3400 只股票
+2025-08-24 06:59:53,147 [INFO] fetch_kline.py:335 开始抓取 3400 支股票 | 数据源:mootdx | 频率:5m | 日期:20190101 → 20250824
+2025-08-24 06:59:53,154 [WARNING] config.py:39 未找到配置文件 /Users/xushuai/.mootdx/config.json, 正在生成配置文件.
+2025-08-24 06:59:53,156 [INFO] server.py:176 [-] 选择最快的服务器...
+2025-08-24 06:59:53,156 [ERROR] server.py:186 请手动运行`python -m mootdx bestip`
+2025-08-24 06:59:53,156 [ERROR] fetch_kline.py:283 000001 第 1 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 06:59:54,241 [ERROR] fetch_kline.py:283 000001 第 2 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 06:59:58,298 [ERROR] fetch_kline.py:283 000001 第 3 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:00:02,386 [ERROR] fetch_kline.py:286 000001 三次抓取均失败，已跳过！
+2025-08-24 07:00:02,391 [ERROR] fetch_kline.py:283 000002 第 1 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:00:05,392 [ERROR] fetch_kline.py:283 000002 第 2 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:00:09,598 [ERROR] fetch_kline.py:283 000002 第 3 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:00:12,733 [ERROR] fetch_kline.py:286 000002 三次抓取均失败，已跳过！
+2025-08-24 07:00:12,735 [ERROR] fetch_kline.py:283 000006 第 1 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:00:15,342 [ERROR] fetch_kline.py:283 000006 第 2 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:00:19,198 [ERROR] fetch_kline.py:283 000006 第 3 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:00:22,814 [ERROR] fetch_kline.py:286 000006 三次抓取均失败，已跳过！
+2025-08-24 07:00:22,817 [ERROR] fetch_kline.py:283 000008 第 1 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:00:24,370 [ERROR] fetch_kline.py:283 000008 第 2 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:00:27,231 [ERROR] fetch_kline.py:283 000008 第 3 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:00:35,614 [ERROR] fetch_kline.py:286 000008 三次抓取均失败，已跳过！
+2025-08-24 07:00:35,617 [ERROR] fetch_kline.py:283 000009 第 1 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:00:37,307 [ERROR] fetch_kline.py:283 000009 第 2 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:00:41,477 [ERROR] fetch_kline.py:283 000009 第 3 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:00:46,613 [ERROR] fetch_kline.py:286 000009 三次抓取均失败，已跳过！
+2025-08-24 07:00:46,615 [ERROR] fetch_kline.py:283 000010 第 1 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:00:49,539 [ERROR] fetch_kline.py:283 000010 第 2 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:00:52,969 [ERROR] fetch_kline.py:283 000010 第 3 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:01:01,636 [ERROR] fetch_kline.py:286 000010 三次抓取均失败，已跳过！
+2025-08-24 07:01:01,782 [ERROR] fetch_kline.py:283 000011 第 1 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:01:03,320 [ERROR] fetch_kline.py:283 000011 第 2 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:01:08,349 [ERROR] fetch_kline.py:283 000011 第 3 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:01:16,736 [ERROR] fetch_kline.py:286 000011 三次抓取均失败，已跳过！
+2025-08-24 07:01:16,739 [ERROR] fetch_kline.py:283 000012 第 1 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:01:18,412 [ERROR] fetch_kline.py:283 000012 第 2 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:01:20,774 [ERROR] fetch_kline.py:283 000012 第 3 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:01:23,989 [ERROR] fetch_kline.py:286 000012 三次抓取均失败，已跳过！
+2025-08-24 07:01:23,990 [ERROR] fetch_kline.py:283 000016 第 1 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:01:26,166 [ERROR] fetch_kline.py:283 000016 第 2 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:01:30,859 [ERROR] fetch_kline.py:283 000016 第 3 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:01:35,740 [ERROR] fetch_kline.py:286 000016 三次抓取均失败，已跳过！
+2025-08-24 07:01:35,742 [ERROR] fetch_kline.py:283 000019 第 1 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:01:37,684 [ERROR] fetch_kline.py:283 000019 第 2 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:01:43,627 [ERROR] fetch_kline.py:283 000019 第 3 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:01:51,708 [ERROR] fetch_kline.py:286 000019 三次抓取均失败，已跳过！
+2025-08-24 07:01:51,710 [ERROR] fetch_kline.py:283 000021 第 1 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:01:54,434 [ERROR] fetch_kline.py:283 000021 第 2 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:01:56,562 [ERROR] fetch_kline.py:283 000021 第 3 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:02:02,772 [ERROR] fetch_kline.py:286 000021 三次抓取均失败，已跳过！
+2025-08-24 07:02:02,778 [ERROR] fetch_kline.py:283 000025 第 1 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:02:04,090 [ERROR] fetch_kline.py:283 000025 第 2 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:02:09,767 [ERROR] fetch_kline.py:283 000025 第 3 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:02:13,523 [ERROR] fetch_kline.py:286 000025 三次抓取均失败，已跳过！
+2025-08-24 07:02:13,524 [ERROR] fetch_kline.py:283 000026 第 1 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:02:15,934 [ERROR] fetch_kline.py:283 000026 第 2 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:02:20,764 [ERROR] fetch_kline.py:283 000026 第 3 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:02:26,274 [ERROR] fetch_kline.py:286 000026 三次抓取均失败，已跳过！
+2025-08-24 07:02:26,283 [ERROR] fetch_kline.py:283 000027 第 1 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:02:28,157 [ERROR] fetch_kline.py:283 000027 第 2 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:02:30,991 [ERROR] fetch_kline.py:283 000027 第 3 次抓取失败
+Traceback (most recent call last):
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 262, in fetch_one
+    new_df = get_kline(code, start, end, "qfq", datasource, freq_code)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 220, in get_kline
+    return _get_kline_mootdx(code, start, end, adjust, freq_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/Documents/StockTradebyZ-main/fetch_kline.py", line 186, in _get_kline_mootdx
+    client = Quotes.factory(market="std")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 44, in factory
+    return StdQuotes(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xushuai/miniconda3/envs/zgnb/lib/python3.12/site-packages/mootdx/quotes.py", line 154, in __init__
+    ip, port = self.server
+    ^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 0)
+2025-08-24 07:05:00,865 [INFO] fetch_kline.py:81 筛选得到 3400 只股票
+2025-08-24 07:05:00,866 [INFO] fetch_kline.py:363 开始抓取 3400 支股票 | 数据源:tushare | 频率:5m | 日期:2025-08-01 → 20250824
+2025-08-24 07:05:01,346 [WARNING] fetch_kline.py:140 Tushare 拉取 000001 在 2025-08-01 的分钟线失败: 抱歉，您每天最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:01,712 [WARNING] fetch_kline.py:140 Tushare 拉取 000001 在 2025-08-04 的分钟线失败: 抱歉，您每天最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:02,065 [WARNING] fetch_kline.py:140 Tushare 拉取 000001 在 2025-08-05 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:02,394 [WARNING] fetch_kline.py:140 Tushare 拉取 000001 在 2025-08-06 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:02,740 [WARNING] fetch_kline.py:140 Tushare 拉取 000001 在 2025-08-07 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:03,056 [WARNING] fetch_kline.py:140 Tushare 拉取 000001 在 2025-08-08 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:03,359 [WARNING] fetch_kline.py:140 Tushare 拉取 000001 在 2025-08-11 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:03,678 [WARNING] fetch_kline.py:140 Tushare 拉取 000001 在 2025-08-12 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:04,003 [WARNING] fetch_kline.py:140 Tushare 拉取 000001 在 2025-08-13 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:04,391 [WARNING] fetch_kline.py:140 Tushare 拉取 000001 在 2025-08-14 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:04,725 [WARNING] fetch_kline.py:140 Tushare 拉取 000001 在 2025-08-15 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:05,042 [WARNING] fetch_kline.py:140 Tushare 拉取 000001 在 2025-08-18 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:05,365 [WARNING] fetch_kline.py:140 Tushare 拉取 000001 在 2025-08-19 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:05,702 [WARNING] fetch_kline.py:140 Tushare 拉取 000001 在 2025-08-20 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:06,013 [WARNING] fetch_kline.py:140 Tushare 拉取 000001 在 2025-08-21 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:06,364 [WARNING] fetch_kline.py:140 Tushare 拉取 000001 在 2025-08-22 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:06,721 [WARNING] fetch_kline.py:140 Tushare 拉取 000002 在 2025-08-01 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:07,064 [WARNING] fetch_kline.py:140 Tushare 拉取 000002 在 2025-08-04 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:07,393 [WARNING] fetch_kline.py:140 Tushare 拉取 000002 在 2025-08-05 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:07,720 [WARNING] fetch_kline.py:140 Tushare 拉取 000002 在 2025-08-06 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:08,096 [WARNING] fetch_kline.py:140 Tushare 拉取 000002 在 2025-08-07 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:08,463 [WARNING] fetch_kline.py:140 Tushare 拉取 000002 在 2025-08-08 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:08,782 [WARNING] fetch_kline.py:140 Tushare 拉取 000002 在 2025-08-11 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:09,112 [WARNING] fetch_kline.py:140 Tushare 拉取 000002 在 2025-08-12 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:09,435 [WARNING] fetch_kline.py:140 Tushare 拉取 000002 在 2025-08-13 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:09,752 [WARNING] fetch_kline.py:140 Tushare 拉取 000002 在 2025-08-14 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:10,100 [WARNING] fetch_kline.py:140 Tushare 拉取 000002 在 2025-08-15 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:10,414 [WARNING] fetch_kline.py:140 Tushare 拉取 000002 在 2025-08-18 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:10,730 [WARNING] fetch_kline.py:140 Tushare 拉取 000002 在 2025-08-19 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:11,036 [WARNING] fetch_kline.py:140 Tushare 拉取 000002 在 2025-08-20 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:11,366 [WARNING] fetch_kline.py:140 Tushare 拉取 000002 在 2025-08-21 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:11,734 [WARNING] fetch_kline.py:140 Tushare 拉取 000002 在 2025-08-22 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:12,064 [WARNING] fetch_kline.py:140 Tushare 拉取 000006 在 2025-08-01 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:12,382 [WARNING] fetch_kline.py:140 Tushare 拉取 000006 在 2025-08-04 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:12,721 [WARNING] fetch_kline.py:140 Tushare 拉取 000006 在 2025-08-05 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:13,062 [WARNING] fetch_kline.py:140 Tushare 拉取 000006 在 2025-08-06 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:13,380 [WARNING] fetch_kline.py:140 Tushare 拉取 000006 在 2025-08-07 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:13,690 [WARNING] fetch_kline.py:140 Tushare 拉取 000006 在 2025-08-08 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:14,005 [WARNING] fetch_kline.py:140 Tushare 拉取 000006 在 2025-08-11 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:14,330 [WARNING] fetch_kline.py:140 Tushare 拉取 000006 在 2025-08-12 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:14,642 [WARNING] fetch_kline.py:140 Tushare 拉取 000006 在 2025-08-13 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:14,977 [WARNING] fetch_kline.py:140 Tushare 拉取 000006 在 2025-08-14 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:15,305 [WARNING] fetch_kline.py:140 Tushare 拉取 000006 在 2025-08-15 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:15,691 [WARNING] fetch_kline.py:140 Tushare 拉取 000006 在 2025-08-18 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:16,026 [WARNING] fetch_kline.py:140 Tushare 拉取 000006 在 2025-08-19 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:16,360 [WARNING] fetch_kline.py:140 Tushare 拉取 000006 在 2025-08-20 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:16,696 [WARNING] fetch_kline.py:140 Tushare 拉取 000006 在 2025-08-21 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:17,017 [WARNING] fetch_kline.py:140 Tushare 拉取 000006 在 2025-08-22 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:17,348 [WARNING] fetch_kline.py:140 Tushare 拉取 000008 在 2025-08-01 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:17,698 [WARNING] fetch_kline.py:140 Tushare 拉取 000008 在 2025-08-04 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:18,023 [WARNING] fetch_kline.py:140 Tushare 拉取 000008 在 2025-08-05 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:18,358 [WARNING] fetch_kline.py:140 Tushare 拉取 000008 在 2025-08-06 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:18,695 [WARNING] fetch_kline.py:140 Tushare 拉取 000008 在 2025-08-07 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 07:05:19,018 [WARNING] fetch_kline.py:140 Tushare 拉取 000008 在 2025-08-08 的分钟线失败: 抱歉，您每分钟最多访问该接口2次，权限的具体详情访问：https://tushare.pro/document/1?doc_id=108。
+2025-08-24 08:27:21,835 [INFO] fetch_kline.py:81 筛选得到 3400 只股票
+2025-08-24 08:27:21,836 [INFO] fetch_kline.py:335 开始抓取 3400 支股票 | 数据源:tushare | 频率:5m | 日期:2025-08-01 → 20250824
+2025-08-24 08:42:37,217 [INFO] fetch_kline.py:362 全部任务完成，数据已保存至 /Users/xushuai/Documents/StockTradebyZ-main/data_5min

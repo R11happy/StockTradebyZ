@@ -292,18 +292,18 @@ def main():
     parser = argparse.ArgumentParser(description="按市值筛选 A 股并抓取历史 K 线")
     parser.add_argument("--datasource", choices=["tushare", "akshare", "mootdx"], default="tushare", help="历史 K 线数据源")
     parser.add_argument("--frequency", type=int, choices=list(_FREQ_MAP.keys()), default=4, help="K线频率编码，参见说明")
-    parser.add_argument("--exclude-gem", default=True, help="True则排除创业板/科创板/北交所")
+    parser.add_argument("--exclude-gem", default=False, help="True则排除创业板/科创板/北交所")
     parser.add_argument("--min-mktcap", type=float, default=5e9, help="最小总市值（含），单位：元")
     parser.add_argument("--max-mktcap", type=float, default=float("+inf"), help="最大总市值（含），单位：元，默认无限制")
     parser.add_argument("--start", default="20190101", help="起始日期 YYYYMMDD 或 'today'")
     parser.add_argument("--end", default="today", help="结束日期 YYYYMMDD 或 'today'")
     parser.add_argument("--out", default="./data", help="输出目录")
-    parser.add_argument("--workers", type=int, default=3, help="并发线程数")
+    parser.add_argument("--workers", type=int, default=1, help="并发线程数")
     args = parser.parse_args()
 
     # ---------- Token 处理 ---------- #
     if args.datasource == "tushare":
-        ts_token = " "  # 在这里补充token
+        ts_token = "e9a352db1e3bc57734dd5232c058b9e36e4b655f0d0661ea3ecb1b8d"  # 在这里补充token
         ts.set_token(ts_token)
         global pro
         pro = ts.pro_api()
