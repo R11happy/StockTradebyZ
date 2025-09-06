@@ -2,5 +2,5 @@ akshare==1.17.7
 mootdx==0.11.7
 pandas==2.3.0
 tqdm==4.66.4
-tushare==1.4.21
+tushare==1.4.24
 scipy==1.14.1

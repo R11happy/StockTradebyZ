@@ -533,6 +533,68 @@ class BBIShortLongSelector:
         return picks
 
 
+class VolumeRatioSelector:
+    """
+    量比选股器，筛选开盘（9:30-9:35）期间量比 > ratio 的股票。
+    """
+    def __init__(self, ratio: float = 5.0, lookback_days: int = 20) -> None:
+        self.ratio = ratio
+        self.lookback_days = lookback_days
+        self.open_start_time = pd.to_datetime("09:30").time()
+        self.open_end_time = pd.to_datetime("09:35").time()
+
+    def _calculate_volume_ratio(self, code: str, current_date: pd.Timestamp, all_data: Dict[str, pd.DataFrame]) -> Optional[float]:
+        stock_data = all_data.get(code)
+        if stock_data is None or stock_data.empty:
+            return None
+
+        # Filter data for the current day and opening period
+        current_day_data = stock_data[stock_data.index.date == current_date.date()]
+        
+        # Ensure 'datetime' index is used for time-based filtering
+        if not isinstance(current_day_data.index, pd.DatetimeIndex):
+            return None # Or handle error: data not properly indexed with datetime
+
+        open_period_data = current_day_data.between_time(self.open_start_time, self.open_end_time)
+
+        if open_period_data.empty:
+            return None
+        
+        current_open_volume = open_period_data["volume"].sum()
+
+        # Calculate average volume for the same opening period over lookback_days
+        past_dates = pd.to_datetime(stock_data.index.date).unique()
+        past_dates = sorted([d for d in past_dates if d < current_date.date()], reverse=True)[:self.lookback_days]
+
+        if not past_dates:
+            return None # Not enough historical data to calculate average volume
+
+        historical_open_volumes = []
+        for date in past_dates:
+            hist_day_data = stock_data[stock_data.index.date == date]
+            hist_open_period_data = hist_day_data.between_time(self.open_start_time, self.open_end_time)
+            if not hist_open_period_data.empty:
+                historical_open_volumes.append(hist_open_period_data["volume"].sum())
+        
+        if not historical_open_volumes:
+            return None
+
+        average_open_volume = np.mean(historical_open_volumes)
+
+        if average_open_volume == 0:
+            return None # Avoid division by zero
+
+        return current_open_volume / average_open_volume
+
+    def select(self, date: pd.Timestamp, all_data: Dict[str, pd.DataFrame]) -> List[str]:
+        picks: List[str] = []
+        for code in all_data.keys():
+            volume_ratio = self._calculate_volume_ratio(code, date, all_data)
+            if volume_ratio is not None and volume_ratio > self.ratio:
+                picks.append(code)
+        return picks
+
+
 class BreakoutVolumeKDJSelector:
     """
     放量突破 + KDJ + DIF>0 + 收盘价波动幅度 选股器   

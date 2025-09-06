@@ -3,7 +3,7 @@
     {
       "class": "BBIKDJSelector",
       "alias": "少妇战法",
-      "activate": true,
+      "activate": false,
       "params": {
         "j_threshold": 10,
         "bbi_min_window": 20,
@@ -29,7 +29,7 @@
     {
       "class": "SuperB1Selector",
       "alias": "SuperB1战法",
-      "activate": true,
+      "activate": false,
       "params": {
         "lookback_n": 10,
         "close_vol_pct": 0.02,
@@ -49,7 +49,7 @@
     {
       "class": "BBIShortLongSelector",
       "alias": "补票战法",
-      "activate": true,
+      "activate": false,
       "params": {
         "n_short": 3,
         "n_long": 21,
@@ -62,7 +62,7 @@
     {
       "class": "BreakoutVolumeKDJSelector",
       "alias": "TePu战法",
-      "activate": true,
+      "activate": false,
       "params": {
         "j_threshold": 1,
         "j_q_threshold": 0.10,
